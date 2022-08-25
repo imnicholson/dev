@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --network=host --rm mongo mongodump --host $1 -d $2 --username=$3 --password=$4 --archive --gzip | cat > $2_$(date '+%d-%m-%Y_%H-%M-%S').gz

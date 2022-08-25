@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -v ${PWD}:/mnt/backups --network=host --rm mongo mongorestore --host localhost --archive=/mnt/backups/$1 --gzip --drop --nsFrom="$2.*" --nsTo="$3.*"
